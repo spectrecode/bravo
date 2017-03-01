@@ -1,0 +1,251 @@
+/***
+	Autor 	: Carlos Espinoza
+	Email 	: c.augusto.espinoza@gmail.com
+***/
+
+/***
+	Descripcion: Prefijos
+***/
+
+/***
+	Descripcion: Se definen los colores que se usaran durante
+	todo el desarrollo del site
+***/
+azul 			= #2D4C7B
+amarrillo       = #fed500
+blanco 			= #fff
+negro 			= #000
+negrogris       = #1D1D1B
+naranja     	= #F19601  
+humo            = #f9f9f9
+plomo 			= #F6F6F6
+gris 			= #9D9D9C
+gris-claro      = #575756
+gris-claro2 	= #E3E3E3
+gris-claro3     = #262020
+turqueza        = #29A8C2
+verde 			= #1abc9c
+rojo 			= #DA0812
+/***
+	Descripcion: Se definen las fuentes que se usaran durante
+	todo el desarrollo del site
+***/
+
+arial 				= "Arial"
+open_sansbold 		= "open_sansbold"
+open_sansextrabold  = "open_sansextrabold"
+open_sanslight      = "open_sanslight"
+open_sansextrabold_italic = "open_sansextrabold_italic"
+open_sanssemibold   = "open_sanssemibold"
+open_sansitalic     = "open_sansitalic"
+open_sansregular    = "open_sansregular"
+robotoregular       = "robotoregular"
+robotobold          = "robotobold"
+robotbold           = "robotobold"
+/***
+	Descripcion: Se definen las funciones mixtas
+	que emplearemos 
+***/
+
+font-tipografia(tamano, peso, _color,_fuente)
+	font-size tamano
+	font-family _fuente, sans-serif;
+	font-weight peso 
+	color _color
+
+body
+
+	background-image url('../image/fondo.jpg')
+	background-repeat repeat
+	background-size cover
+	background-position center center
+	padding-bottom 20px
+
+	//background blanco
+	font-size 16px
+a, button
+	font-tipografia(20px, normal, blanco,arial)
+h1
+	font-tipografia(26px, normal, negrogris,arial)
+	margin 0
+p
+	font-tipografia(14px, normal, gris-claro3,open_sansregular)
+	margin 0
+h2,h3,h4
+	font-tipografia(24px, normal, negrogris,arial)
+	margin 0
+span
+	font-tipografia(12px, normal, negro,arial)
+figure
+		margin 0
+.container
+	margin auto
+	width 100%
+	@media screen and (min-width: 992px)
+		width 970px
+	@media screen and (min-width: 1200px)
+		width 1170px
+	.inner-top
+		align-items flex-start
+		display flex
+		flex-direction row
+		flex-wrap no-wrap
+		justify-content flex-start
+		padding-left 90px
+		padding-top 60px
+		padding-bottom 30px
+		.col-top
+			&:first-child
+				figure
+					margin auto
+					padding-right 50px
+					text-align center
+			&:last-child
+				hgroup
+					text-align center
+					h3
+						color rojo
+						margin-top 15px
+	.inner-bottom
+		padding-right 80px
+		.block-title
+			background rojo
+			box-shadow -1px 6px 14px 0px rgba(0,0,0,0.75)
+			padding-top 10px
+			padding-bottom 10px
+			width 330px
+			h1
+				color blanco
+				text-align center
+				font-size 32px
+		.inner-box
+			align-items strech
+			display flex
+			flex-direction row
+			flex-wrap no-wrap
+			justify-content flex-start
+			padding-top 30px
+			@media screen and (min-width: 1200px)
+				justify-content space-between
+				
+			.box-left
+				padding-left 60px
+				padding-top 20px
+				width 563px
+				.box-access
+					border 1px dotted rojo
+					box-shadow -1px 6px 14px 0px rgba(0,0,0,0.75)
+					padding 80px 15px 100px
+					margin 45px 0 0
+					ul
+						align-items flex-start
+						display flex
+						flex-direction row
+						flex-wrap no-wrap
+						justify-content center
+						margin 0
+						padding 0
+						list-style none
+						li
+							a
+								color rojo
+								display block
+								font-size 18px
+								text-align center
+								padding-left 10px
+								padding-right 10px
+								text-decoration none
+								&:hover
+									color gris-claro
+			.box-separate
+				background url('../image/separar.jpg') center no-repeat
+				padding-left 50px
+				padding-right 50px
+			.box-right
+				padding-top 80px
+				ul
+					margin 0
+					padding 0
+					list-style none
+					li
+						display block
+						margin-bottom 20px
+						&.separate
+							padding-bottom 20px
+							border-bottom 1px dotted rojo
+						a
+							color rojo
+							font-size 14px
+							display block
+							text-align center
+							text-decoration none
+							&:hover
+								color gris-claro
+	
+.inner-content
+	align-items flex-start			
+	display flex
+	flex-direction row
+	flex-wrap no-wrap
+	justify-content space-between
+	.featured
+		width 840px
+.inner-block
+	margin-top 30px
+.asibar
+	width 300px
+/***
+	Descripción: Estilos para un modal
+***/
+.outer-flex-container
+	animation mostrarDialog 0.5s ease-in-out
+	animation-fill-mode forwards
+	align-content center
+	align-items center
+	background rgba(0,0,0,0.5)
+	display flex
+	height 100%
+	justify-content center
+	left 0
+	padding-top 50px
+	pointer-events auto
+	position fixed
+	top 0
+	opacity 1
+	overflow-y scroll
+	transition opacity 400ms ease-in
+	width 100%
+	z-index 9999
+	.inner-flex-container
+		animation mostarContainer 1s ease-in-out 0.5s
+		animation-fill-mode forwards
+		position relative
+		margin 10% auto
+		padding 5px 20px 13px 20px
+		border-radius 10px
+		background color-blanco
+		opacity 0
+		top 0%
+		.ngdialog-close
+			color color-grisoscuro
+			cursor pointer
+			font-size 20px
+			line-height 25px
+			position absolute
+			right -12px
+			text-align center
+			top -10px
+			text-decoration none
+			width 24px
+			&:hover
+				color color-grisoscuro
+.img-responsive
+	max-width 100%	
+@keyframes mostarContainer
+	0% 
+		opacity 0
+		top 0% 
+	100%
+		opacity 1
+		top 0 
+		

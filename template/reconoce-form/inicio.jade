@@ -1,0 +1,48 @@
+section.ReconoceForm
+	.container
+		.inner-top
+			.col-top
+				figure
+					img(src="./public/image/cubo.jpg")
+			.col-top
+				hgroup
+					h2
+						| En Media Impact celebramos todos los días la pasión 
+						br
+						| que sentimos por lo que hacemos. 
+					h3
+						| ¡Únete a nuestros 6 años de explosiva pasión!
+		.inner-bottom
+			.block-title
+				h1
+					| # DreamTeam
+			.inner-box
+				.box-left
+					p
+						| Cada día tenemos muchas responsabilidades, pero son esas acciones adicionales las que nos permiten ser mejores y todos debemos reconocerlas.
+					.box-access
+						.inner-left
+							figure
+								img(src="./public/image/corazon.png")
+							hgroup
+								h3
+									| COMPROMISO
+						.inner-form
+							hgroup.box-title
+								h2
+									| GRACIAS POR RECONOCER EL BUEN
+									br
+									| TRABAJO DE NUESTROS COMPAÑEROS.
+							form
+								.form-group
+									input(type="text", name="para_user", placeholder="Para ...")
+								.form-group
+									textarea(name="mundo_para_detalle", placeholder="Ingresa Detalle Para Mundo ..." )
+								.form-group
+									input(type="text", name="de_user", placeholder="De ...")
+								input(type="hidden", name="tipo_dream")
+								.form-group
+									a(href="javascript:void()", ng-click="enviarDatos()")
+										| Enviar
+
+				include ../asibar/asibar.jade

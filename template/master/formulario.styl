@@ -1,0 +1,50 @@
+/***
+	Mensajes de alerta 
+***/
+.form-error
+	display none
+	label
+		display none !important
+	span
+		color color-rojo
+		font-family family_robotobold
+		font-size 14px
+/***
+	Estilos Generalas para botones, link formularios en general
+***/
+.form-group
+	margin-bottom 10px
+button
+	background rojo
+	border-radius 10px
+	border 0px
+	font-size 16px
+	color blanco
+	padding-top 10px
+	padding-bottom 10px
+	padding-left 15px
+	padding-right 15px
+	&:focus
+		outline 0px
+button[disabled]
+	background linear-gradient(top, blanco, blanco)
+	cursor default
+input[type="text"],input[type="password"]
+	background blanco
+	border 1px solid negrogris
+	border-top-right-radius 5px
+	border-bottom-right-radius 5px
+	border-top-left-radius 5px
+	border-bottom-left-radius 5px
+	padding-left 18px
+	padding-top 5px
+	padding-bottom 5px	
+	font-size 12px
+	&:focus
+		background blanco
+		outline 0px
+	&:-webkit-autofill
+		-webkit-text-fill-color negro
+		-webkit-box-shadow 0 0 0px 1000px blanco inset
+	&.error
+		border-color red !important
